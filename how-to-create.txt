@@ -1,0 +1,9 @@
+https://www.hellocodeclub.com/maven-jar-plugin-how-to-make-an-executable-jar-file
+
+mvn clean dependency:copy-dependencies package
+
+
+java -jar target/BBMJasperBOFCCBatch-1.0-SNAPSHOT.jar
+
+
+ java -jar target/BBMJasperBOFCCBatch-1.0-SNAPSHOT.jar balKey=balance_sheet_detailed ReportProperties=BeanCollectionReportGeneratorClasses.properties JasperReportPath=e:\itc\app\eod\mozcc\ca\BOReportrefresh\common\JasperReport
