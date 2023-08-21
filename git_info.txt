@@ -1,0 +1,65 @@
+1.create new repository
+eg:--	moz-jasper-report
+
+2.Add readme.md file.
+
+3. git clone https://github.com/jyotipg/moz-jasper-report.git
+
+cd moz-jasper-report
+
+git branch
+git checkout -b release
+git push --set-upstream origin release
+git checkout main
+git checkout -b development
+git push --set-upstream origin development
+git checkout -b moz-bo-adhoc-feature
+git push --set-upstream origin moz-bo-adhoc-feature
+
+4.click on settings and select the branch option from left hand side.
+ and create the branch protection rules.
+	a.Branch name pattern		:	main
+	  Require a pull request before merging		:	Require approvals 	:required approval before merging 1
+	
+	b.Branch name pattern		:	development
+	  Require a pull request before merging		:	Require approvals 	:required approval before merging 2
+
+	c.Branch name pattern		:	release
+	  Require a pull request before merging		:	Require approvals 	:required approval before merging 1
+	
+	d.Branch name pattern		:	[!main|!development|!release]
+	  select allow deletion option
+
+5. then select general setting and set Default branch (main to development branch).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GIT COMMANDS				DESCRIPTION
+git init 				Initialized empty Git repository
+git add .  				add project into local git repository
+git commit -m "initial commit"		
+git remote add origin https://github.com/jyotipg/moz-jasper-report.git
+git push -u origin master
+git push --set-upstream origin master
+git checkout -b development
+
+
+git branch -m development main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+
+
